@@ -1,0 +1,14 @@
+.title {
+  text-align: center;
+  margin-top: 25px;
+  margin-bottom: 30px;
+
+  &__main {
+    font: 700 30px $font-title;
+    color: #bdbdbd;
+  }
+
+  &__sub {
+    font-size: 18px;
+  }
+}

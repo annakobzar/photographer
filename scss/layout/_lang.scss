@@ -1,0 +1,45 @@
+.lang {
+  display: flex;
+
+  &__shortcut {
+    font-weight: 300;
+    font-size: 1.3rem;
+  }
+
+  &__field {
+    display: none;
+
+    &:checked + .lang__label::before {
+      left: 16px;
+    }
+  }
+
+  &__label {
+    @include size(30px, 15px);
+
+    border: 1px solid #262626;
+    border-radius: 20px;
+    display: block;
+    position: relative;
+    margin: 0 5px;
+
+    &::before {
+      @include size(11px);
+      @include pos($t: 1px, $l: 1px);
+
+      content: "";
+      background: #1b1b1b;
+      border-radius: 50%;
+      transition: all 0.3s;
+    }
+  }
+}
+
+// desktop
+@media (min-width: $mobile) {
+  .lang {
+    &__label {
+      cursor: pointer;
+    }
+  }
+}
